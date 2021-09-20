@@ -1,0 +1,39 @@
+•  Spiegare i vantaggi di un sistema di versioning all’interno di un progetto. 
+
+	Permette agli utenti di lavorare su un unico progetto in maniera simultanea, grazie alla possibilità di creare un workflow di lavoro in cui le operazioni basilari che si svolgono all’interno di un progetto (patch, aggiunta di nuove features, reset, ecc) risultano chiare e separate. Inoltre è un modo per risparmiare l’utilizzo di dati visto che il file su cui si lavora rimane unico.
+ 
+•  Indicare i comandi che conosci per la creazione di un repository. 
+
+	In locale: dopo aver creato una directory con il comando “ mkdir <options> <path> ” la cartella può essere inizializzata come una repository con il comando  “ git init “. 
+	In remoto: sul sito github tramite il comando new. 
+
+•  Spiegare ruolo di “origin” . 
+	
+	Non sono sicuro della risposta e ci stavamo pensando i giorni precedenti. Dovrebbe riferirsi alla repository in remoto e dovrebbe fare root per l’albero del workflow. Infatti quando facciamo il push di un branch che abbiamo modificato viene fatto tramite il comando “ git push -u origin nome_branch ”. 
+	
+•  Spiegare significato dei comandi git push e git pull. 
+
+	Git push permette di commitare le modifiche eseguite in locale sul server, facendo un update della branch modificata. Git pull permette di aggiornare in locale l’ultima versione presente in remoto. Questa operazione va eseguita prima delle modifiche da apportare al progetto.
+
+•  Spiegare differenza fra una revert e una reset. 
+
+	Il reset permette di annullare l’ultimo update eseguito online. Quindi dovrebbe tipo annullare l’ultimo push eseguito nel caso si sia fatto un disastro. Questa operazione porta a cancellare quindi parte della storia dei commit. Revert invece dovrebbe annullare l’ultimo commit in locale semplicemente facendo un nuovo commit uguale e contrario.
+
+•  Spiegare cos’è un branch in git, in particolare la differenza tra i branch master e develop. 
+
+	Il master branch è il primo che viene creato. Rappresenta il branch in cui vengono rilasciate le release ed è un punto sicuro del progetto in cui è stato rilasciato codice funzionate e che può essere rilasciato. Il develop è il ramo in cui avviene lo sviluppo del codice, da cui partono i rami delle features che vengono prese in consegna dai vari utenti e in cui viene fatto il merge delle nuove features. Dopo essere state approvate vengono passate al ramo di release.
+	
+•  Indicare il comando per staccare un nuovo branch. 
+
+	git branch nome_branch
+	git checkout -b nome_branch
+	
+
+•  Indicare il comando per mergiare un branch (esempio develop) in un altro (esempio proprio branch di sviluppo). 
+	
+	Una volta fatto checkout sul ramo di develop bisogna utilizzare il comando 
+	git merge branch_sviluppo
+
+•  Spiegare il motivo per cui viene creata una pull request. 
+	
+	Per eseguire l’update dei file alla versione più recente, in modo da essere sincronizzati al progetto.
