@@ -1,0 +1,18 @@
+1) Un sistema di versioning permette di registrare i cambiamenti che vengono fatti all'interno di un file o di più file. Viene creata una history delle varie versione e permette la navigazione all'interno di esse.
+Facilita il lavoro di più persone all'interno di un singolo progetto, permette di commentare, salvare ogni modifica eseguita.
+
+2) git init
+
+3) Origin è il nome che viene dato al repository quando cloniamo un progetto tramite il comando git clone.
+
+4) Il git push serve per aggiornare la repository online con la nostra repository in locale, mentre il git pull si usa per aggiornare la repository in locale con quella online
+
+5) Sono entrambi comandi che servono per annullare delle operazioni. Il primo serve per tornare indietro e riporta il repository ad uno stato precedente, non crea nessun commit. Mentre il secondo permette sempre di tornare ad uno stato precedente però crea un commit che ne indica le modifiche.
+
+6) Un branch in git è una ramificazione che parte dal ramo principale (master). Il branch develop è il ramo dove si sviluppa il codice mentre il branch master è il ramo sicuro del codice dove vengono rilasciate le varie release dopo che sono state testate e si sa che sono funzionanti
+
+7) git branch <nome>
+
+8) se si lavora sul branch develop il comando è: git merge branch_sviluppo
+
+9) Quando si modifica il codice e si è apportato un miglioramento ad esso si può proporre la modifica al propietario della repository tramite la pull request. Il proprietrario poi potrà decidere se accettare o no la modifica.
