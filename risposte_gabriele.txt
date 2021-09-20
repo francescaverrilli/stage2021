@@ -1,4 +1,5 @@
-1) Un sistema di versioning permette di registrare i cambiamenti che vengono fatti all'interno di un file o di più file. Viene creata una history delle varie versione e permette la navigazione all'interno di esse.
+
+1) Un sistema di versioning permette di registrare i cambiamenti che vengono fatti all'interno di un file o di più file. Viene creata una history delle varie versioni e permette la navigazione all'interno di esse.
 Facilita il lavoro di più persone all'interno di un singolo progetto, permette di commentare, salvare ogni modifica eseguita.
 
 2) git init
@@ -15,4 +16,14 @@ Facilita il lavoro di più persone all'interno di un singolo progetto, permette 
 
 8) se si lavora sul branch develop il comando è: git merge branch_sviluppo
 
-9) Quando si modifica il codice e si è apportato un miglioramento ad esso si può proporre la modifica al propietario della repository tramite la pull request. Il proprietrario poi potrà decidere se accettare o no la modifica.
+9) Quando si modifica il codice e si è apportato un miglioramento ad esso si può proporre la modifica al proprietario della repository tramite la pull request. Il proprietario poi potrà decidere se accettare o no la modifica.
+
+10) fatto
+
+11) I conflitti possono nascere dopo aver fatto un merge o un rebase. Posso essere risolti tramite un editor di testo, o tramite il comando git mergetool, dopo aver risolto i conflitti in un merge bisogna fare un git commit, in un rebase invece git rebase --continue
+
+12) Entrambi servono per unire due o più branch. Il merge nell'unione mantiene tutti i commit del ramo che viene unito, mentre il rebase comprime tutti i commit un in nuovo commit.
+
+13) Il git fetch scarica da una repository online tutti i file e i commit e li salva nella repository locale. Con -all vengono recuperati tutti i branch. Con -p prima di recuperare elimina tutti i branch che non esistono più.
+
+14) Con lo stash si può salvare in modo temporaneo il lavoro. Ad esempio stiamo lavorando a un codice e non siamo ancora pronti a fare il commit, se dobbiamo per necessità cambiare branch utilizzeremo il comando stash per mettere da parte il lavoro, fare quello che dobbiamo fare e successivamente riprendere il lavoro da dove si era interrotto.
