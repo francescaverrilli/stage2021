@@ -31,9 +31,29 @@
 
 •  Indicare il comando per mergiare un branch (esempio develop) in un altro (esempio proprio branch di sviluppo). 
 	
-	Una volta fatto checkout sul ramo di develop bisogna utilizzare il comando 
-	git merge branch_sviluppo
+	Una volta fatto checkout sul ramo di develop bisogna utilizzare il comando git merge branch_sviluppo
 
 •  Spiegare il motivo per cui viene creata una pull request. 
 	
 	Per eseguire l’update dei file alla versione più recente, in modo da essere sincronizzati al progetto.
+
+
+11. Spiegare la situazione che potrebbe portare alla nascita di conflitti, e i comandi da utilizzare dopo averli risolti
+
+	Quando più persone lavorano sullo stesso branch può accadere che i file in locale non corrispondano ai corrispettivi file in remoto a causa di modifiche avvenute. Quindi quando si prova a fare il merge tra il ramo padre (che si è precedentemente pullato per ottenere l’ultima versione) e il ramo figlio i file con linee di codice diverse vanno in conflitto. Si può risolvere modificando manualmente i file in locale oppure tramite l’utilizzo di tool (che non abbiamo visto). Il comando git -diff mostra le differenze tra i file. Dopo la risoluzione dei conflitti va fatto un commit.
+	
+
+12. Spiegare le modalità di integrazione dei branch (merge e rebase) e le differenze
+
+	Quando vogliamo integrare le modifiche presenti nei file nelle versioni presenti nei rami branchs al ramo di develop dobbiamo svolgere una operazione di rebase o merge.  Le due operazioni sono possibili solo se vi è un percorso orientato che le unisce. Nel merge si mantiene l’unione dei file presenti nei 2 rami, nel caso si trovino su 2 percorsi separati (cioè è successa una fork) un nuovo commit viene effettuato. Nel rebase, in pratica, quando siamo avanti nei commit nel branch di cui vuoi integrare le modifiche rispetto al ramo padre allora git prende come base il primo nodo in comune e da lì successivamente applica prima le modifiche del ramo padre e poi quelle del ramo branch fino all’ultimo commit del ramo padre. Non viene effettuato nessun nuovo commit in questo caso. Poiché viene modificata la storia dei commit questa operazione non è possibile effettuarla dopo aver pushato sul remoto 
+
+
+13. Spiegare l'utilità dell'utilizzo del comando git fetch --all -p
+
+	Il comando git fetch permette di ricercare tutti i riferimenti sul remoto. Con riferimenti si intende il file (o un qualsiasi oggetto che sia assocciato a un commit) e il suo commit. Con l’opzione--all vengono recuperati i file di tutti i branch. Con -p prima di recuperare elimina tutti i riferimenti che non esistono più. 
+
+	
+14. Approfondire i comandi di stash descrivendone i principali utilizzi
+
+	Con lo stash si possono salvare in modo temporaneo in locale le modifiche a un riferimento. Ad esempio, supponiamo di stare lavorando su un file nel branch A e non siamo ancora pronti a farne il commit (e quindi non vogliamo modificare il nostro file che si trova in uno stato funzionante) e dobbiamo per necessità cambiare branch per risolvere dei bug. Utilizzeremo il comando stash per mettere da parte il lavoro nel branch A e facciamo checkout su un altro branch. Terminato il lavoro sul branch su cui ci eravamo spostati possiamo riprendere il lavoro tornando nel branch A dalle ultime modifiche effettuate e non commitate. Nel caso volessimo applicare poi le modifiche si usa il comando apply, nel caso volessimo rimuoverle il comando pop. Si possono avere più stash e poi scegliere quale applicare al “working file” (sarebbe l’ultima versione commitata).
+
