@@ -24,6 +24,6 @@ Facilita il lavoro di più persone all'interno di un singolo progetto, permette 
 
 12) Entrambi servono per unire due o più branch. Il merge nell'unione mantiene tutti i commit del ramo che viene unito, mentre il rebase comprime tutti i commit un in nuovo commit.
 
-13) Il git fetch scarica da una repository online tutti i file e i commit e li salva nella repository locale. Con -all vengono recuperati tutti i branch. Con -p prima di recuperare elimina tutti i branch che non esistono più.
+13) Il git fetch scarica da una repository online tutti i file e i commit e li salva nella repository locale. Con -all vengono recuperati tutti i riferimenti. Con -p prima di recuperare elimina tutti i riferimenti alla repository che non esistono più.
 
 14) Con lo stash si può salvare in modo temporaneo il lavoro. Ad esempio stiamo lavorando a un codice e non siamo ancora pronti a fare il commit, se dobbiamo per necessità cambiare branch utilizzeremo il comando stash per mettere da parte il lavoro, fare quello che dobbiamo fare e successivamente riprendere il lavoro da dove si era interrotto.
