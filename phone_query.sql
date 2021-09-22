@@ -110,10 +110,18 @@ Group by O.description;
 
 #7. Select count of smartphones for each country in the database
 
-SELECT COUNT(S.name), C.code, C.name, B.name, B.country
-FROM smartphone as S, country as C, brand as B
-Where S.brand = B.name 
-GROUP BY S.brand;
+UPDATE smartphone
+SET brand= 1
+WHERE name = 'Galaxy'
+and brand = 5;
+
+select * 
+from smartphone;
+
+select count(S.name), B.country
+from smartphone as S, country as C, brand as B
+WHERE S.brand = B.id and B.country = C.code
+Group by S.brand;
 
 #8 Select name of all countries and their brands, if any.
 
